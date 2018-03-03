@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="app_textviews_margin">10dp</dimen>
+    <dimen name="app_size_titulo">30sp</dimen>
+    <dimen name="app_size_text">20sp</dimen>
+    <dimen name="field_container_top_margin">20dp</dimen>
+    <dimen name="field_input_width">150dp</dimen>
+    <dimen name="app_button_top_nmargin">30dp</dimen>
+    <dimen name="app_margin_left">10dp</dimen>
+    <dimen name="app_margin_top">20dp</dimen>
+    <dimen name="field_seekbar_max">99</dimen>
+    <dimen name="field_seekbar_min">1</dimen>
+    <dimen name="app_image_logo_width">100dp</dimen>
+    <dimen name="app_image_logo_height">100dp</dimen>
+    <dimen name="field_label_width">100dp</dimen>
+    <dimen name="field_label_margin">20dp</dimen>
+</resources>

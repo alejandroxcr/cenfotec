@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context="com.muybold.semana02.MainActivity">
+
+    <ImageView
+        android:layout_width="@dimen/app_image_logo_width"
+        android:layout_height="@dimen/app_image_logo_height"
+        android:layout_gravity="center"
+        android:src="@drawable/rebel_logo"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_titulo_formulario"
+        android:textSize="@dimen/app_size_titulo"
+        android:textAllCaps="true"
+        android:layout_gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Contenedor nombre -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="@dimen/app_margin_left"
+        android:layout_marginTop="@dimen/field_container_top_margin">
+
+        <TextView
+            android:layout_width="@dimen/field_input_width"
+            android:layout_height="wrap_content"
+            android:text="@string/user_nombre"
+            android:textSize="@dimen/app_size_text"/>
+
+        <EditText
+            android:id="@+id/nombreUsuarioInput"
+            android:layout_width="@dimen/field_input_width"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+    <!-- FIN: Contenedor nombre ******************************** -->
+
+    <!-- Contenedor edad -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="@dimen/app_margin_left"
+        android:layout_marginTop="@dimen/field_container_top_margin">
+
+        <TextView
+            android:layout_width="@dimen/field_input_width"
+            android:layout_height="wrap_content"
+            android:text="@string/user_edad"
+            android:textSize="@dimen/app_size_text"/>
+
+        <SeekBar
+            android:id="@+id/edadUserInput"
+            android:layout_width="@dimen/field_input_width"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"/>
+
+        <TextView
+            android:id="@+id/userEdadVisor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"/>
+
+    </LinearLayout>
+    <!-- FIN: Contenedor edad ******************************** -->
+
+    <!-- Contenedor correo -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/app_margin_left"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/field_container_top_margin">
+
+        <TextView
+            android:layout_width="@dimen/field_input_width"
+            android:layout_height="wrap_content"
+            android:text="@string/user_correo"
+            android:textSize="@dimen/app_size_text"/>
+
+        <EditText
+            android:id="@+id/emailUserInput"
+            android:layout_width="@dimen/field_input_width"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"/>
+
+    </LinearLayout>
+    <!-- FIN: Contenedor correo ******************************** -->
+
+    <Button
+        android:id="@+id/button_enviar"
+        android:layout_width="@dimen/field_input_width"
+        android:layout_height="wrap_content"
+        android:text="@string/app_button_enviar"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/app_button_top_nmargin"/>
+
+</LinearLayout>

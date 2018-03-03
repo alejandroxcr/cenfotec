@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Formulario</string>
+    <string name="app_titulo_formulario">Datos de usuario</string>
+    <string name="user_nombre">Nombre</string>
+    <string name="user_correo">Correo</string>
+    <string name="user_edad">Edad</string>
+    <string name="app_button_enviar">Enviar</string>
+    <string name="app_error_missing_data">Debes llenar todos los campos</string>
+    <string name="app_bienvenido">Bienvenido</string>
+    <string name="app_hola">Hola</string>
+</resources>
