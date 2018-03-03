@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context="com.fireblend.aplicacionbasica.ui.OtroActivity">
+
+    <TextView
+        android:id="@+id/texto"
+        android:textSize="25sp"
+        android:textColor="#0000ff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/activity_1_txt"
+        android:layout_marginBottom="@dimen/margen"/>
+
+    <EditText
+        android:id="@+id/input"
+        android:hint="Texto"
+        android:layout_marginBottom="25dp"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content" />
+
+
+    <Button
+        android:id="@+id/boton_cambiar"
+        android:layout_width="@dimen/ancho_boton"
+        android:layout_height="wrap_content"
+        android:text="@string/pasar" />
+
+    <Button
+        android:id="@+id/boton_llamar"
+        android:layout_width="@dimen/ancho_boton"
+        android:layout_height="wrap_content"
+        android:text="@string/hacer_llamada" />
+
+</LinearLayout>

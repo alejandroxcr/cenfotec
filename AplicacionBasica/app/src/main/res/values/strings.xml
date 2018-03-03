@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Aplicacion Basica</string>
+    <string name="btn_guardar">Guardar</string>
+    <string name="btn_cargar">Cargar</string>
+    <string name="hola">Hola Mundo!</string>
+    <string name="activity_1_txt">Este es el activity 1</string>
+    <string name="pasar">Pasar a Otro Activity</string>
+    <string name="hacer_llamada">llamada</string>
+    <string name="volver">Volver</string>
+    <string name="soy_el_otro_activity">Soy el Otro Activity</string>
+    <string name="error_vacio">El mensaje no puede estar vacio!</string>
+</resources>
