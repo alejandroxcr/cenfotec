@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Proyecto01</string>
     <string name="title_msg">Hola Mundo</string>
+    <string name="str_ingresar">Ingresar</string>
+    <string name="str_hola">Hola a todos</string>
+    <string name="str_welcome">Bienvenido</string>
+    <string name="str_callmaria">Llamar a Maria</string>
 </resources>

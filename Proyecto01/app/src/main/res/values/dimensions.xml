@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="title_font_size">70sp</dimen>
+    <dimen name="welcome_font_size">40sp</dimen>
     <dimen name="title_line_height">-25sp</dimen>
     <dimen name="title_sides_margin">10dp</dimen>
+    <dimen name="button_width">150dp</dimen>
+    <dimen name="button_height">60dp</dimen>
+    <dimen name="button_margins">50dp</dimen>
+
 </resources>
