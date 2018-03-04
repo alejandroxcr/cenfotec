@@ -14,7 +14,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="@dimen/app_image_top_margin"
         android:layout_marginBottom="@dimen/app_image_bottom_margin"
-        android:src="@drawable/contact_icon" />
+        android:src="@drawable/contact_icon"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -25,6 +25,7 @@
         android:textAllCaps="true"
         android:layout_gravity="center"
         android:textStyle="bold"
+        android:fontFamily="@font/oswald"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -43,6 +44,7 @@
             android:layout_height="wrap_content"
             android:textColor="@color/textColor"
             android:text="@string/user_nombre"
+            android:fontFamily="@font/oswald"
             android:textSize="@dimen/app_size_text"/>
 
         <EditText
@@ -67,6 +69,7 @@
             android:layout_height="wrap_content"
             android:text="@string/user_edad"
             android:textColor="@color/textColor"
+            android:fontFamily="@font/oswald"
             android:textSize="@dimen/app_size_text"/>
 
         <SeekBar
@@ -80,6 +83,7 @@
             android:layout_width="wrap_content"
             android:textColor="@color/textColor"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/oswald"
             android:text="0"/>
 
     </LinearLayout>
@@ -104,6 +108,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/textColor"
+                android:fontFamily="@font/oswald"
                 android:text="@string/genero_hombre"/>
 
             <RadioButton
@@ -111,6 +116,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/textColor"
+                android:fontFamily="@font/oswald"
                 android:text="@string/genero_mujer"/>
 
         </RadioGroup>
@@ -130,6 +136,7 @@
             android:layout_width="@dimen/field_label_width"
             android:layout_height="wrap_content"
             android:text="@string/user_correo"
+            android:fontFamily="@font/oswald"
             android:textColor="@color/textColor"
             android:textSize="@dimen/app_size_text"/>
 
@@ -151,6 +158,7 @@
         android:textStyle="bold"
         android:background="@color/textColor"
         android:textColor="@color/buttonTextColor"
+        android:fontFamily="@font/oswald"
         android:layout_gravity="center"
         android:layout_marginTop="@dimen/app_button_top_margin"/>
 
