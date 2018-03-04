@@ -5,6 +5,7 @@
     <dimen name="app_size_text">20sp</dimen>
     <dimen name="field_container_top_margin">30dp</dimen>
     <dimen name="field_input_width">200dp</dimen>
+    <dimen name="field_input_seekbar_width">150dp</dimen>
     <dimen name="field_label_width">100dp</dimen>
     <dimen name="app_button_top_margin">50dp</dimen>
     <dimen name="app_margin_left">10dp</dimen>

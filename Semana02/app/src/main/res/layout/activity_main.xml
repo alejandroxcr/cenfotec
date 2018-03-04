@@ -71,7 +71,7 @@
 
         <SeekBar
             android:id="@+id/edadUserInput"
-            android:layout_width="@dimen/field_input_width"
+            android:layout_width="@dimen/field_input_seekbar_width"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"/>
 
@@ -79,6 +79,7 @@
             android:id="@+id/userEdadVisor"
             android:layout_width="wrap_content"
             android:textColor="@color/textColor"
+            android:textSize="35dp"
             android:layout_height="wrap_content"
             android:text="0"/>
 
