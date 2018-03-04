@@ -5,38 +5,136 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/white"
+    android:background="@color/backgroundColor"
     tools:context="com.muybold.semana02.DashboardActivity">
 
     <ImageView
+        android:layout_marginTop="@dimen/app_image_top_margin"
+        android:layout_marginBottom="@dimen/app_image_bottom_margin"
         android:layout_width="@dimen/app_image_logo_width"
         android:layout_height="@dimen/app_image_logo_height"
         android:layout_gravity="center"
-        android:src="@drawable/rebel_logo"/>
+        android:src="@drawable/contact_icon"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_marginLeft="@dimen/app_margin_left"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/field_container_top_margin">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/app_hola"
+            android:text="@string/app_nuevo_contacto"
             android:textSize="@dimen/app_size_titulo"
-            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:textColor="@color/textColor"
+            android:layout_marginRight="2dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+    </LinearLayout>
+
+    <!-- Nombre //////////////////////////////////////////////////////// -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/app_margin_left"
+        android:layout_marginTop="@dimen/field_container_top_margin">
 
         <TextView
+            android:layout_width="@dimen/field_label_width"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textColor"
+            android:text="@string/user_nombre"/>
+
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="wrap_content"
+            android:textColor="@color/textColor"
+            android:layout_height="wrap_content"
+            android:text="nombre"/>
+    </LinearLayout>
+    <!-- FIN: Nombre //////////////////////////////////////////////////// -->
+
+    <!-- Edad //////////////////////////////////////////////////////// -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/app_margin_left"
+        android:layout_marginTop="@dimen/field_container_top_margin">
+
+        <TextView
+            android:layout_width="@dimen/field_label_width"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textColor"
+            android:text="@string/user_edad"/>
+
+        <TextView
+            android:id="@+id/user_edad"
+            android:layout_width="wrap_content"
+            android:textColor="@color/textColor"
+            android:layout_height="wrap_content"
+            android:text="edad" />
+    </LinearLayout>
+    <!-- FIN: Edad //////////////////////////////////////////////////// -->
+
+    <!-- Genero //////////////////////////////////////////////////////// -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/app_margin_left"
+        android:layout_marginTop="@dimen/field_container_top_margin">
+
+        <TextView
+            android:layout_width="@dimen/field_label_width"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textColor"
+            android:text="@string/genero"/>
+
+        <TextView
+            android:id="@+id/user_genero"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:width="@dimen/field_input_width"
-            android:textSize="@dimen/app_size_titulo"
-            android:text="usuario"/>
+            android:text="genero"/>
+
+
     </LinearLayout>
+
+    <!-- Correo //////////////////////////////////////////////////////// -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/field_container_top_margin"
+        android:layout_marginLeft="@dimen/app_margin_left">
+
+        <TextView
+            android:layout_width="@dimen/field_label_width"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textColor"
+            android:text="@string/user_correo"/>
+
+        <TextView
+            android:id="@+id/user_correo"
+            android:layout_width="wrap_content"
+            android:textColor="@color/textColor"
+            android:layout_height="wrap_content"
+            android:text="correo"/>
+    </LinearLayout>
+    <!-- FIN: Correo //////////////////////////////////////////////////// -->
+
+    <Button
+        android:id="@+id/volver_btn"
+        android:layout_width="@dimen/field_input_width"
+        android:layout_marginTop="@dimen/app_button_top_margin"
+        android:layout_height="wrap_content"
+        android:text="@string/app_volver"
+        android:textStyle="bold"
+        android:textColor="@color/buttonTextColor"
+        android:background="@color/textColor"
+        android:layout_gravity="center"/>
 
 
 

@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -23,6 +25,9 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.emailUserInput) EditText emailUsuario;
     @BindView(R.id.edadUserInput) SeekBar edadUsuario;
     @BindView(R.id.userEdadVisor) TextView usuarioEdadVisor;
+    @BindView(R.id.radio_genero) RadioGroup radioGenero;
+
+    private String _generoUsuario;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,13 +45,27 @@ public class MainActivity extends AppCompatActivity {
 
         if(nombreUsuario.getText().toString().matches("")
                 || emailUsuario.getText().toString().matches("")
-                || usuarioEdadVisor.getText().toString().matches("0")){
+                || usuarioEdadVisor.getText().toString().matches("0")
+                || radioGenero.getCheckedRadioButtonId() == -1){
             Toast.makeText(MainActivity.this,R.string.app_error_missing_data, Toast.LENGTH_SHORT).show();
         } else {
 
             openNextStage(); //Llama activity dashboard
         }
 
+    }
+
+    @OnClick({R.id.radio_hombre, R.id.radio_mujer})
+    public void onRadioClick(RadioButton radio){
+        switch (radio.getId()){
+            case R.id.radio_hombre:
+                _generoUsuario = "Hombre";
+                break;
+
+            case R.id.radio_mujer:
+                _generoUsuario = "Mujer";
+                break;
+        }
     }
 
     private void openNextStage(){
@@ -58,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra("nombre", nombreUsuario.getText().toString());
         intent.putExtra("correo", emailUsuario.getText().toString());
         intent.putExtra("edad", usuarioEdadVisor.getText().toString());
+        intent.putExtra("genero", _generoUsuario);
 
         // 3. Iniciar nuevo activity
         startActivity(intent);

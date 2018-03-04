@@ -2,26 +2,29 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@color/white"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-
+    android:background="@color/backgroundColor"
     tools:context="com.muybold.semana02.MainActivity">
 
     <ImageView
         android:layout_width="@dimen/app_image_logo_width"
         android:layout_height="@dimen/app_image_logo_height"
         android:layout_gravity="center"
-        android:src="@drawable/rebel_logo"/>
+        android:layout_marginTop="@dimen/app_image_top_margin"
+        android:layout_marginBottom="@dimen/app_image_bottom_margin"
+        android:src="@drawable/contact_icon" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/app_titulo_formulario"
+        android:textColor="@color/textColor"
         android:textSize="@dimen/app_size_titulo"
         android:textAllCaps="true"
         android:layout_gravity="center"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -36,14 +39,16 @@
         android:layout_marginTop="@dimen/field_container_top_margin">
 
         <TextView
-            android:layout_width="@dimen/field_input_width"
+            android:layout_width="@dimen/field_label_width"
             android:layout_height="wrap_content"
+            android:textColor="@color/textColor"
             android:text="@string/user_nombre"
             android:textSize="@dimen/app_size_text"/>
 
         <EditText
             android:id="@+id/nombreUsuarioInput"
             android:layout_width="@dimen/field_input_width"
+            android:textColor="@color/textColor"
             android:layout_height="wrap_content" />
 
     </LinearLayout>
@@ -58,9 +63,10 @@
         android:layout_marginTop="@dimen/field_container_top_margin">
 
         <TextView
-            android:layout_width="@dimen/field_input_width"
+            android:layout_width="@dimen/field_label_width"
             android:layout_height="wrap_content"
             android:text="@string/user_edad"
+            android:textColor="@color/textColor"
             android:textSize="@dimen/app_size_text"/>
 
         <SeekBar
@@ -72,11 +78,45 @@
         <TextView
             android:id="@+id/userEdadVisor"
             android:layout_width="wrap_content"
+            android:textColor="@color/textColor"
             android:layout_height="wrap_content"
             android:text="0"/>
 
     </LinearLayout>
     <!-- FIN: Contenedor edad ******************************** -->
+
+    <!-- Contenedor genero -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/app_margin_left"
+        android:layout_marginTop="@dimen/field_container_top_margin">
+
+
+        <RadioGroup
+            android:id="@+id/radio_genero"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radio_hombre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textColor"
+                android:text="@string/genero_hombre"/>
+
+            <RadioButton
+                android:id="@+id/radio_mujer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textColor"
+                android:text="@string/genero_mujer"/>
+
+        </RadioGroup>
+
+    </LinearLayout>
+    <!-- FIN: Contenedor genero ******************************** -->
 
     <!-- Contenedor correo -->
     <LinearLayout
@@ -87,15 +127,17 @@
         android:layout_marginTop="@dimen/field_container_top_margin">
 
         <TextView
-            android:layout_width="@dimen/field_input_width"
+            android:layout_width="@dimen/field_label_width"
             android:layout_height="wrap_content"
             android:text="@string/user_correo"
+            android:textColor="@color/textColor"
             android:textSize="@dimen/app_size_text"/>
 
         <EditText
             android:id="@+id/emailUserInput"
             android:layout_width="@dimen/field_input_width"
             android:layout_height="wrap_content"
+            android:textColor="@color/textColor"
             android:inputType="textEmailAddress"/>
 
     </LinearLayout>
@@ -106,7 +148,10 @@
         android:layout_width="@dimen/field_input_width"
         android:layout_height="wrap_content"
         android:text="@string/app_button_enviar"
+        android:textStyle="bold"
+        android:background="@color/textColor"
+        android:textColor="@color/buttonTextColor"
         android:layout_gravity="center"
-        android:layout_marginTop="@dimen/app_button_top_nmargin"/>
+        android:layout_marginTop="@dimen/app_button_top_margin"/>
 
 </LinearLayout>

@@ -8,4 +8,10 @@
     <string name="app_error_missing_data">Debes llenar todos los campos</string>
     <string name="app_bienvenido">Bienvenido</string>
     <string name="app_hola">Hola</string>
+    <string name="app_exception">Error:</string>
+    <string name="app_nuevo_contacto">Nuevo contacto:</string>
+    <string name="app_volver">Volver</string>
+    <string name="genero_hombre">Hombre</string>
+    <string name="genero_mujer">Mujer</string>
+    <string name="genero">Género</string>
 </resources>
