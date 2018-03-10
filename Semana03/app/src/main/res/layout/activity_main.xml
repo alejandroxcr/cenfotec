@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.muybold.semana03.MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="@string/app_username"
+        android:textAllCaps="true"
+        android:textSize="@dimen/app_title_font_size"
+        android:layout_marginTop="@dimen/app_margin_component"/>
+
+    <EditText
+        android:id="@+id/input_username"
+        android:layout_width="@dimen/app_input_width_component"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="@dimen/app_default_font_size"
+        android:layout_marginTop="@dimen/app_margin_component"/>
+
+    <CheckBox
+        android:id="@+id/input_check_remember"
+        android:layout_width="@dimen/app_input_width_component"
+        android:layout_gravity="center"
+        android:textSize="@dimen/app_default_font_size"
+        android:layout_height="wrap_content"
+        android:text="@string/app_remember"/>
+
+</LinearLayout>
