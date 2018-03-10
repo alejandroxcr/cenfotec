@@ -4,13 +4,10 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.TextView;
-import android.widget.Toast;
 
-import com.muybold.semana03.com.muybold.seman02.constants.Constants;
+import com.muybold.semana03.com.muybold.semana03.constants.Constants;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

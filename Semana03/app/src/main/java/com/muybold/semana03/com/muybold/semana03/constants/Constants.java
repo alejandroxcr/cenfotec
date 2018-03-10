@@ -1,4 +1,4 @@
-package com.muybold.semana03.com.muybold.seman02.constants;
+package com.muybold.semana03.com.muybold.semana03.constants;
 
 /**
  * Created by Estudiantes on 10/03/2018.
