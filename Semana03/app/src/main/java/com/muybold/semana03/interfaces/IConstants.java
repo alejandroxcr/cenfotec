@@ -6,8 +6,10 @@ package com.muybold.semana03.interfaces;
 
 public interface IConstants {
 
-    String APP_PREFS = "app.preferences";
-    String REMEMBER_CHECK = "rememberCheck";
-    String REMEMBER_USERNAME = "rememberUsername";
+    String APP_MAIN_PREFERENCES = "app.preferences";
+    String APP_PREFERENCE_REMEMBER = "rememberCheck";
+    String APP_PREFERENCE_USERNAME = "rememberUsername";
+
+    String APP_INTERNAL_NAMES_FILE = "name_list.txt";
 
 }

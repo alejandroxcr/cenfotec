@@ -1,5 +1,13 @@
 <resources>
     <string name="app_name">Semana03</string>
+    <string name="app_title">Storage app</string>
     <string name="app_username">Username</string>
     <string name="app_remember">Recordar</string>
+    <string name="app_enter">Enter</string>
+    <string name="app_new_name">Add Name...</string>
+    <string name="app_internal">Internal</string>
+    <string name="app_add">Add</string>
+    <string name="app_successfully_added">Successfully Added!</string>
+    <string name="app_fail_added">Error, Not added</string>
+
 </resources>

@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAlignment="center"
-        android:text="@string/app_username"
+        android:text="@string/app_title"
         android:textAllCaps="true"
         android:textSize="@dimen/app_title_font_size"
         android:layout_marginTop="@dimen/app_margin_component"/>
@@ -22,6 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:textSize="@dimen/app_default_font_size"
+        android:hint="@string/app_username"
         android:layout_marginTop="@dimen/app_margin_component"/>
 
     <CheckBox
@@ -31,5 +32,13 @@
         android:textSize="@dimen/app_default_font_size"
         android:layout_height="wrap_content"
         android:text="@string/app_remember"/>
+
+    <Button
+        android:id="@+id/enter_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/app_margin_component"
+        android:text="@string/app_enter"
+        android:layout_gravity="center"/>
 
 </LinearLayout>
