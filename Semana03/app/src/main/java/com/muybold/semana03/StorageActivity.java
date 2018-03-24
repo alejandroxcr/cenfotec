@@ -8,10 +8,12 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.muybold.semana03.classes.ExtenalStorage;
 import com.muybold.semana03.classes.InternalStorage;
 import com.muybold.semana03.helpers.PermissionManager;
 import com.muybold.semana03.helpers.StorageManager;
 import com.muybold.semana03.interfaces.IConstants;
+import com.muybold.semana03.interfaces.IStorage;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -126,6 +128,10 @@ public class StorageActivity extends AppCompatActivity {
 
     private void saveExternal(){
 
+        StorageManager manager = new StorageManager(new ExtenalStorage());
+        String usrInput = externalName.getText().toString().trim();
+
+        manager.write(this, "semana02.txt", usrInput, true);
     }
 
     private void updateViewer(){
