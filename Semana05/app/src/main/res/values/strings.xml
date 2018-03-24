@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Camera</string>
+    <string name="app_no_write_permission">No tienes permiso de escritura</string>
+    <string name="app_no_file_created">Hubo un problema al crear archivo :(</string>
+</resources>

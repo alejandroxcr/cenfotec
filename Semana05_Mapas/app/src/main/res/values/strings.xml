@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Semana05_Mapas</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="map_new_marker">New Marker</string>
+    <string name="map_name_new_marker">Enter a marker title</string>
+    <string name="map_input_hint">Marker Title</string>
+    <string name="map_input_prefill">Marker Title</string>
+</resources>
