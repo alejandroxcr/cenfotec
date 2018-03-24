@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="app_margin_component">10dp</dimen>
+    <dimen name="app_bin_margin_component">40dp</dimen>
     <dimen name="app_input_width_component">250dp</dimen>
     <dimen name="app_default_font_size">16sp</dimen>
     <dimen name="app_title_font_size">22sp</dimen>

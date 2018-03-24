@@ -11,5 +11,6 @@ public interface IConstants {
     String APP_PREFERENCE_USERNAME = "rememberUsername";
 
     String APP_INTERNAL_NAMES_FILE = "name_list.txt";
+    String APP_USERNAME = "userName";
 
 }

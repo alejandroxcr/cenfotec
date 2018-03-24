@@ -60,6 +60,9 @@ public class MainActivity extends AppCompatActivity {
     public void onEnterClicked(){
 
         Intent intent = new Intent(MainActivity.this, StorageActivity.class);
+
+        intent.putExtra(IConstants.APP_USERNAME, userName.getText().toString());
+
         startActivity(intent);
     }
 

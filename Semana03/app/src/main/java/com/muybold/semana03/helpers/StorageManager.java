@@ -24,8 +24,8 @@ public class StorageManager {
      * @param content
      * @return
      */
-    public boolean write(Context context, String fileName, String content ){
-        return _storage.write(context, fileName, content);
+    public boolean write(Context context, String fileName, String content, boolean appendToContent ){
+        return _storage.write(context, fileName, content, appendToContent);
     }
 
     /**

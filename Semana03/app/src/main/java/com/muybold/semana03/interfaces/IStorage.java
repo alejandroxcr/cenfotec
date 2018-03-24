@@ -14,7 +14,7 @@ public interface IStorage {
      * @param content
      * @return
      */
-    boolean write(Context context, String fileName, String content);
+    boolean write(Context context, String fileName, String content, boolean appendToContent);
 
     /**
      * Lee un archivo de almacenamiento interno o externo

@@ -9,5 +9,9 @@
     <string name="app_add">Add</string>
     <string name="app_successfully_added">Successfully Added!</string>
     <string name="app_fail_added">Error, Not added</string>
-
+    <string name="app_welcome">Bienvenido</string>
+    <string name="app_info_on_file">Stored info:</string>
+    <string name="app_stored">Stored here</string>
+    <string name="app_external_storage">External storage</string>
+    <string name="app_internal_storage">Internal storage</string>
 </resources>

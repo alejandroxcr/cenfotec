@@ -25,14 +25,26 @@ public class InternalStorage implements IStorage {
      * @return
      */
     @Override
-    public boolean write(Context context, String fileName, String content)  {
+    public boolean write(Context context, String fileName, String content, boolean appendToContent)  {
         boolean result = false;
 
         FileOutputStream outputStream = null;
 
         try {
 
-            outputStream = context.openFileOutput(fileName, Context.MODE_PRIVATE);
+            // Append to content
+            if(appendToContent) {
+                String currentContent = read(context, fileName);
+
+                if (!currentContent.isEmpty()) {
+
+                    StringBuilder sb = new StringBuilder();
+                    sb.append(currentContent + " " + content);
+                    content = sb.toString();
+                }
+            }
+
+            outputStream = context.openFileOutput(fileName, Context.MODE_PRIVATE); // Append to file
             outputStream.write(content.getBytes());
             outputStream.close();
 
