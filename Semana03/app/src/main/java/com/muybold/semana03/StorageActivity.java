@@ -15,6 +15,8 @@ import com.muybold.semana03.helpers.StorageManager;
 import com.muybold.semana03.interfaces.IConstants;
 import com.muybold.semana03.interfaces.IStorage;
 
+import org.w3c.dom.Text;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -32,6 +34,9 @@ public class StorageActivity extends AppCompatActivity {
 
     @BindView(R.id.stored_viewer)
     TextView storedViewer;
+
+    @BindView(R.id.external_stored)
+    TextView externalViewer;
 
     private String _userName;
 
@@ -51,12 +56,18 @@ public class StorageActivity extends AppCompatActivity {
      */
     private void init(){
 
-        String welcomeMsg = "";
+        String welcomeMsg = null;
         StorageManager manager = new StorageManager(new InternalStorage());
         String content = manager.read(this, IConstants.APP_INTERNAL_NAMES_FILE);
 
+        manager = new StorageManager(new ExtenalStorage());
+        String contentExternal = manager.read(this,"semana02.txt");
+
         if(!content.isEmpty())
             storedViewer.setText(content);
+
+        if(!contentExternal.isEmpty())
+            externalViewer.setText(contentExternal);
 
         _userName = getIntent().getStringExtra(IConstants.APP_USERNAME);
         welcomeMsg = getString(R.string.app_welcome) + ", " + _userName;
@@ -98,7 +109,7 @@ public class StorageActivity extends AppCompatActivity {
 
             // Check for external write permissions
             if (PermissionManager.hasWriteExternalWritePermission(StorageActivity.this)) {
-                //
+                saveExternal();
             } else {
 
                 PermissionManager.askPermission(this,
@@ -126,14 +137,33 @@ public class StorageActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Saves in external location
+     */
     private void saveExternal(){
 
         StorageManager manager = new StorageManager(new ExtenalStorage());
         String usrInput = externalName.getText().toString().trim();
 
-        manager.write(this, "semana02.txt", usrInput, true);
-    }
+        boolean result = manager.write(this, "semana02.txt", usrInput, true);
 
+        if(result) {
+
+            String updatedExternal = manager.read(this,"semana02.txt");
+            if(updatedExternal != null)
+                externalViewer.setText(updatedExternal);
+                externalName.setText("");
+
+        }
+        else {
+            Toast.makeText(this, getString(R.string.app_fail_added), Toast.LENGTH_LONG);
+        }
+
+    } // saveExternal
+
+    /**
+     * uPDATE internal storage viewer
+     */
     private void updateViewer(){
 
         StorageManager manager = new StorageManager(new InternalStorage());

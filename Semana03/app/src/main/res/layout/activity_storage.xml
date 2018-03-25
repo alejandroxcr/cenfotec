@@ -111,6 +111,14 @@
 
             </LinearLayout>
 
+        <TextView
+            android:id="@+id/external_stored"
+            android:layout_marginLeft="@dimen/app_margin_component"
+            android:layout_marginTop="@dimen/app_margin_component"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/app_stored"/>
+
     </LinearLayout>
 
 
