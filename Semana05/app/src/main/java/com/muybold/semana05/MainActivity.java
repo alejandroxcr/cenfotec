@@ -9,7 +9,9 @@ import android.provider.MediaStore;
 import android.support.v4.content.FileProvider;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.muybold.semana05.calsses.ExternalStorage;
@@ -26,6 +28,9 @@ public class MainActivity extends AppCompatActivity {
 
     @BindView(R.id.user_photo)
     ImageView userPhoto;
+
+    @BindView(R.id.piece_msg)
+    TextView pieceMsg;
 
     private Uri _photoUri;
 
@@ -74,7 +79,6 @@ public class MainActivity extends AppCompatActivity {
 
                 _photoUri = FileProvider.getUriForFile(this, IConstants.FILE_PROVIDER, result);
 
-
                 photoIntent.putExtra(MediaStore.EXTRA_OUTPUT,_photoUri);
                 startActivityForResult(photoIntent, IConstants.PHOTO_RESULT_CODE);
 
@@ -98,11 +102,18 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
-        if(requestCode == IConstants.PHOTO_RESULT_CODE && resultCode == RESULT_OK){
+        try {
 
-            Bundle extras = data.getExtras();
-            Bitmap imageBitmap = (Bitmap) extras.get("data");
-            userPhoto.setImageBitmap(imageBitmap);
+            if (requestCode == IConstants.PHOTO_RESULT_CODE && resultCode == RESULT_OK) {
+
+                Bitmap imageBitmap = MediaStore.Images.Media. getBitmap(getContentResolver(), _photoUri);
+                userPhoto.setImageBitmap(imageBitmap);
+                pieceMsg.setVisibility(View.VISIBLE);
+
+            }
+        }catch (Exception ex){
+
+            ex.printStackTrace();
         }
     }
 
