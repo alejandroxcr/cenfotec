@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Semana04</string>
+    <string name="app_something_wrong">Algo salió mal :(</string>
+    <string name="app_emtpy_response">Llamada al WS no devolvió información</string>
 </resources>

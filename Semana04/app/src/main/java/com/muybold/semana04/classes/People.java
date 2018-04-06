@@ -8,4 +8,7 @@ public class People {
 
     public String name;
     public String birth_year;
-}
+    public String height;
+    public String gender;
+
+} // People
