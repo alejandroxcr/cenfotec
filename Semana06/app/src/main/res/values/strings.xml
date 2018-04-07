@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Semana06</string>
+    <string name="app_fragment_1">Fragment 1</string>
+    <string name="app_button_hola">hola</string>
+    <string name="app_button_chao">chao</string>
+    <string name="app_hola_title">hola!</string>
+    <string name="app_chao_title">chao!</string>
+    <string name="app_error_loading_fragment">Hubo un error al cargar el fragment</string>
+</resources>
