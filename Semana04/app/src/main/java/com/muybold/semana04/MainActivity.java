@@ -3,8 +3,10 @@ package com.muybold.semana04;
 import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.muybold.semana04.adapters.PeopleAdapter;
@@ -23,6 +25,10 @@ public class MainActivity extends AppCompatActivity {
 
     @BindView(R.id.people_list)
     ListView _peopleList;
+
+    @BindView(R.id.progress_indicator)
+    ProgressBar _progressIndicator;
+
 
     private TheForceResponse<People> _people;
 
@@ -45,6 +51,9 @@ public class MainActivity extends AppCompatActivity {
     private void callService(){
 
         StarWarsServiceHandler.StarWarsService service = StarWarsServiceHandler.getService();
+
+        _progressIndicator.setIndeterminate(true);
+        _progressIndicator.setProgress(1);
 
         Call<TheForceResponse<People>> call = service.getPeople();
         call.enqueue(new Callback<TheForceResponse<People>>() {
@@ -86,6 +95,10 @@ public class MainActivity extends AppCompatActivity {
     private void populateList(){
 
         try {
+
+            _progressIndicator.setProgress(100);
+            _progressIndicator.setVisibility(View.GONE);
+            _peopleList.setVisibility(View.VISIBLE);
 
             PeopleAdapter adapter = new PeopleAdapter(this, _people.results);
             _peopleList.setAdapter(adapter);

@@ -5,13 +5,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.muybold.semana04.R;
 import com.muybold.semana04.classes.People;
+import com.squareup.picasso.Picasso;
 
 
-
+import java.io.File;
 import java.util.List;
 
 import butterknife.BindView;
@@ -27,12 +29,15 @@ public class PeopleAdapter extends BaseAdapter {
     private LayoutInflater _inflater;
     private List<People> _list;
 
+    private ProgressBar _progresIndicator;
+
     public PeopleAdapter(Context context, List<People> list){
 
         _context = context;
         _list = list;
         _inflater = (LayoutInflater) _context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
+
 
     @Override
     public int getCount() {
