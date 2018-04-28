@@ -1,0 +1,22 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginRight="@dimen/layout_side_margin"
+    android:layout_marginLeft="@dimen/layout_side_margin">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/title_top_margin"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textSize="@dimen/title_size"
+        android:text="@string/menu_fragement_title"
+        android:layout_marginBottom="@dimen/title_bottom_margin"/>
+
+
+
+</LinearLayout>

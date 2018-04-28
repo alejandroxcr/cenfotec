@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Semana09</string>
+    <string name="pager_title">View Pager</string>
+    <string name="menu_fragement_title">List of options</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
